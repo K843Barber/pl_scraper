@@ -99,3 +99,9 @@ print(plDF)
 
 #================================= File Saving =====================================
 plDF.to_csv("plDF1415.csv")
+#================================= Plotting ========================================
+a = pd.read_csv("plDF1516.csv")
+b = a.groupby(['Season']).plot.bar(x = 'Team', y = 'pl_Goal_difference', color = 'red', title = 'Premier League Goal Differences')
+
+plt.show()
+plt.close('all')
